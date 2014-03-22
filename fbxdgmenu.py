@@ -2,6 +2,7 @@
 
 from xdg import Menu, IconTheme
 import sys
+import re
 
 STANDALONE=False
 
@@ -9,6 +10,8 @@ TERMINAL_COMMAND = "konsole -e %s"
 TERMINAL_PATH_COMMAND = "konsole --workdir %s -e %s"
 
 ICON_THEMES = ('gnome', 'oxygen', 'hicolor')
+
+REMOVE_FROM_EXEC = re.compile(' -caption "?%c"?| -[^ ]+ %[UuFf]| %[UuFfi]')
 
 class FluxboxXDGMenu:
     def __init__(self, standalone=False, filename=None):
@@ -67,7 +70,7 @@ class FluxboxXDGMenu:
         if not d_exec:
             raise ValueError("No executable information found for entry '%s' (%s)." % (name, entry))
 
-        executable = d_exec.split()[0]
+        executable = REMOVE_FROM_EXEC.sub('', d_exec)
         path = entry.DesktopEntry.getPath()
         terminal = entry.DesktopEntry.getTerminal()
 
