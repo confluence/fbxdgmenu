@@ -26,9 +26,6 @@ Menu entry for regenerating the menu:
 Known issues:
 
 * Helpful command-line options to follow. Suggestions welcome.
-* To handle desktop entry field codes the script currently strips
-everything except the first word out of the executable. This works for
-most entries, but some will not be processed correctly.
 
 [1] fluxbox-xdg-menu can also generate a wallpaper submenu, and has a
 header and footer that you may find useful.
