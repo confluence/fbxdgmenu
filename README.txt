@@ -21,7 +21,7 @@ Menu entry for including a generated submenu:
 
 Menu entry for regenerating the menu:
 
-    [exec] (Regenerate menu) {/PATH/TO/fbxdgmenu.py > YOUR_HOME_DIR/.fluxbox/menu}
+    [exec] (Regenerate menu) {/PATH/TO/fbxdgmenu.py > YOUR_HOME_DIR/.fluxbox/applications-menu}
 
 Known issues:
 
