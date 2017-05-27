@@ -42,7 +42,7 @@ class FluxboxXDGMenu:
         contents = []
 
         indent = " " * 4 * depth
-        name = menu.getName().encode("utf8")
+        name = menu.getName()
         icon = self._find_icon(menu.getIcon()) or ""
         contents.append("%s[submenu] (%s) <%s>" % (indent, name, icon))
 
@@ -64,10 +64,11 @@ class FluxboxXDGMenu:
 
     def entry(self, entry, depth):
         indent = " " * 4 * depth
-        name = entry.DesktopEntry.getName().encode("utf8")
+        name = entry.DesktopEntry.getName()
         icon = self._find_icon(entry.DesktopEntry.getIcon()) or ""
 
         d_exec = entry.DesktopEntry.getExec()
+
         if not d_exec:
             raise ValueError("No executable information found for entry '%s' (%s)." % (name, entry))
 
