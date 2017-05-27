@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from __future__ import print_function
 from xdg import Menu, IconTheme
 import sys
 import re
@@ -49,7 +50,7 @@ class FluxboxXDGMenu:
             if isinstance(entry, Menu.MenuEntry):
                 try:
                     contents.append(self.entry(entry, depth + 1))
-                except ValueError, e:
+                except ValueError as e:
                     sys.stderr.write(str(e))
                     continue
             elif isinstance(entry, Menu.Menu):
@@ -90,4 +91,4 @@ class FluxboxXDGMenu:
         return "%s[separator]" % indent
 
 filename = sys.argv[1] if len(sys.argv) > 1 else None
-print FluxboxXDGMenu(standalone=STANDALONE, filename=filename)
+print(FluxboxXDGMenu(standalone=STANDALONE, filename=filename))
