@@ -31,4 +31,6 @@ By default, the xdg library looks for a menu file in `/etc/xdg/menus/debian-menu
 
     fbxdgmenu.py /etc/xdg/menus/some-other.menu > ~/.fluxbox/applications-menu
 
+I recommend `/etc/xdg/menus/gnome-applications.menu`, which provides a very complete list of installed applications.
+
 [1] fluxbox-xdg-menu can also generate a wallpaper submenu, and has a header and footer that you may find useful. https://code.google.com/p/fluxbox-xdg-menu/
