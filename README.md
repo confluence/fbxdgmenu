@@ -1,5 +1,5 @@
 fbxdgmenu.py
-------------
+============
 
 This is a script which generates an applications menu for Fluxbox using
 the freedesktop.org (XDG) standard. It requires the pyxdg library. By
@@ -10,6 +10,7 @@ understand how the XDG menu works, but also to have a simpler script
 which handles *only* the applications menu.
 
 Usage examples:
+---------------
 
 To generate a menu:
 
@@ -24,9 +25,10 @@ Menu entry for regenerating the menu:
     [exec] (Regenerate menu) {/PATH/TO/fbxdgmenu.py > YOUR_HOME_DIR/.fluxbox/applications-menu}
 
 Known issues:
+-------------
 
-* Helpful command-line options to follow. Suggestions welcome.
+By default, the xdg library looks for a menu file in `/etc/xdg/menus/debian-menu.menu`, which may not be present on your system by default: for example, on Ubuntu this file is provided by the `menu-xdg` package. If you do not wish to use this file, you may also specify an explicit path to another menu file as a parameter to the script:
 
-[1] fluxbox-xdg-menu can also generate a wallpaper submenu, and has a
-header and footer that you may find useful.
-https://code.google.com/p/fluxbox-xdg-menu/
+    fbxdgmenu.py /etc/xdg/menus/some-other.menu > ~/.fluxbox/applications-menu
+
+[1] fluxbox-xdg-menu can also generate a wallpaper submenu, and has a header and footer that you may find useful. https://code.google.com/p/fluxbox-xdg-menu/
