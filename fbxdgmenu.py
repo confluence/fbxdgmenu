@@ -21,7 +21,7 @@ class FluxboxXDGMenu:
         if standalone:
             self.contents = "[begin] (Fluxbox)"
             self.contents.extend(self.menu(menu, depth=1))
-            self.comtents.append("[end]")
+            self.contents.append("[end]")
         else:
             self.contents = self.menu(menu)
 
