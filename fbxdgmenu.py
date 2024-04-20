@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-from __future__ import print_function
 from xdg import Menu, IconTheme
 import sys
 import re
