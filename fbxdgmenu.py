@@ -6,8 +6,8 @@ import re
 
 STANDALONE=False
 
-TERMINAL_COMMAND = "konsole -e %s"
-TERMINAL_PATH_COMMAND = "konsole --workdir %s -e %s"
+TERMINAL_COMMAND = "gnome-terminal -- %s"
+TERMINAL_PATH_COMMAND = "gnome-terminal --working-directory=%s -- %s"
 
 ICON_THEMES = ('gnome', 'oxygen', 'hicolor')
 
